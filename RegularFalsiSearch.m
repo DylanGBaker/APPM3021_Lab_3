@@ -7,7 +7,7 @@ while (abs(current_c - previous_c)/ abs(current_c)) > tol
     f_at_a = f(Io(1,1));
     f_at_b = f(Io(1,2));
 
-    current_c = ((Io(1,1) * f(Io(1,2))) - (Io(1,2) * (f(Io(1,1))))) / (f(Io(1,2)) - f(Io(1,1)));
+    current_c = ((Io(1,1) * (f_at_b)) - ((Io(1,2) * (f_at_a)))) / (f_at_b - f_at_a);
 
     if f_at_a * f(current_c) > 0
         Io(1,1) = current_c;
