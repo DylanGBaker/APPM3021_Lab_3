@@ -89,8 +89,27 @@ fprintf("\n");
 fprintf("\n");
 fprintf("\n");
 
+%% Question 1aIV
+
+
+%% Question 1b
+f = @(x) tan(x) - x;
+%found the different intervals by plotting f in matlab.
+
+first_Io = [-0.0001 1.5];
+second_Io = [2 4.5];
+third_Io = [6 7.8];
+tolerance = 0.00001;
+[Root_1] = BisectionSearch(f, tolerance, first_Io);
+[Root_2] = BisectionSearch(f, tolerance, second_Io);
+[Root_3] = BisectionSearch(f, tolerance, third_Io);
+
+fprintf("Using the bisection method, the roots are " + num2str(Root_1) + ", " + num2str(Root_2) + ", " + num2str(Root_3) + "\n");
+
+
 %% Question 2a
 
 %% Question 2b
+%% Question 2c
 
 end
