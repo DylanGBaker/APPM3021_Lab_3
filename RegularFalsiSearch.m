@@ -1,7 +1,8 @@
-function root = RegularFalsiSearch(f, tol, Io)
+function [root, IterationCount] = RegularFalsiSearch(f, tol, Io)
 current_c = Io(1,2);
 previous_c = Io(1,1);
 canUseFalsi = true;
+iterationCount = 0;
 while (abs(current_c - previous_c)/ abs(current_c)) > tol
     previous_c = current_c;
     f_at_a = f(Io(1,1));
@@ -24,9 +25,12 @@ while (abs(current_c - previous_c)/ abs(current_c)) > tol
         canUseFalsi = false;
         break;
     end
+
+    iterationCount = iterationCount + 1;
 end
 if canUseFalsi
     root = current_c;
+    IterationCount = iterationCount - 1;
 else
     disp("Dividing by zero and so regular Falsi search cannot be used!");
 end

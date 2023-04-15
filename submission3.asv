@@ -1,0 +1,34 @@
+function submission3
+%% Question 1aI
+
+fprintf("Method \t\t Root \t Iteration Count\n");
+fprintf("____________________________________\n");
+fprintf("Bisection \t");
+f = @(x) exp(x) + 2^-x + 2*cos(x) - 8;
+Io = [1 3];
+tolerance = 0.00001;
+[Root, IterationCount] = BisectionSearch(f, tolerance, Io);
+fprintf(num2str(Root) + "\t" + num2str());
+%% Question 1aII
+
+fprintf("Method \t\t Root \t Iteration Count\n");
+fprintf("____________________________________\n");
+fprintf("Bisection \t");
+
+f = @(x) exp(x) + 2^-x + 2*cos(x) - 8;
+Io = [1 3];
+tolerance = 0.00001;
+%% Question 1aIII
+
+fprintf("Method \t\t Root \t Iteration Count\n");
+fprintf("____________________________________\n");
+fprintf("Bisection \t");
+
+f = @(x) 1 - ((2)/(x^2 - 2*x + 2));
+Io = [-1 1];
+tolerance = 0.00001;
+%% Question 2a
+
+%% Question 2b
+
+end
