@@ -1,9 +1,10 @@
-function [root, IterationCount] = RegularFalsiSearch(f, tol, Io)
+function [root, IterationCount, errorMatrix] = RegularFalsiSearch(f, tol, Io)
 current_c = Io(1,2);
 previous_c = Io(1,1);
 canUseFalsi = true;
 iterationCount = 0;
-while (abs(current_c - previous_c)/ abs(current_c)) > tol
+while (abs(current_c - previous_c)) > tol
+    errorMatrix(iterationCount + 1, 1) = (abs(current_c - previous_c));
     previous_c = current_c;
     f_at_a = f(Io(1,1));
     f_at_b = f(Io(1,2));

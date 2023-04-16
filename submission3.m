@@ -10,19 +10,19 @@ Io = [1 3];
 Xo = 2;
 tolerance = 0.00001;
 
-[Root, IterationCount] = BisectionSearch(f, tolerance, Io);
+[Root, IterationCount, ~] = BisectionSearch(f, tolerance, Io);
 fprintf("\t\t" + num2str(Root) + "\t\t\t\t\t" + num2str(IterationCount) + "\n");
 fprintf("\n");
 
 fprintf("False Position \t");
 
-[Root, IterationCount] = RegularFalsiSearch(f, tolerance, Io);
+[Root, IterationCount, ~] = RegularFalsiSearch(f, tolerance, Io);
 fprintf("\t" + num2str(Root) + "\t\t\t\t\t" + num2str(IterationCount) + "\n");
 fprintf("\n");
 
 fprintf("Newton \t");
 
-[Root, IterationCount] = NewtonMethodScaler(f, Xo, tolerance);
+[Root, IterationCount, ~] = NewtonMethodScaler(f, Xo, tolerance);
 fprintf("\t\t\t" + num2str(Root) + "\t\t\t\t\t " + num2str(IterationCount) + "\n");
 
 fprintf("\n");
@@ -91,6 +91,12 @@ fprintf("\n");
 
 %% Question 1aIV
 
+PlotErrors();
+
+fprintf("\n");
+fprintf("\n");
+fprintf("\n");
+fprintf("\n");
 
 %% Question 1b
 f = @(x) tan(x) - x;
