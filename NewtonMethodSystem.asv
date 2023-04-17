@@ -13,5 +13,5 @@ for i = 1:size(J,1)
     end
 end
 
-x = gaussElimination(jAC, f);
+augmentedMatrix = gaussElimination(jAC, f);
 end
