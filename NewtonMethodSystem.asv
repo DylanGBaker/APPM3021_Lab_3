@@ -1,7 +1,6 @@
 function x = NewtonMethodSystem(F, J, Xo, tol)
-errorGreaterThanTol = false;
-
- while errorGreaterThanTol
+errorGreaterThanTol
+ while z < 6
 
      if size(F,1) == 2
         for i = 1:size(F,1)
@@ -50,9 +49,6 @@ errorGreaterThanTol = false;
              errorGreaterThanTol = true;
          end
      elseif size(F,1) == 3
-         if error(1,1) < tol && error(2,1) < tol && error(3,1) < tol
-             errorGreaterThanTol = true;
-         end
      end
      z = z + 1;
  end
