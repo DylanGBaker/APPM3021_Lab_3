@@ -14,7 +14,7 @@ function solutionMatrix = backwardsSubstitution(augmentedA, augmentedB)
                         disp("There are infinitely many solutions")
                         infinitelyManySolutions = true;
                     else
-                        augmentedB(i, c) = augmentedB(i, c) - (augmentedA(i, j) * solutionMatrix(j, c)); %This subtracts the values on the LHS of the equation with known numbers.
+                        augmentedB(i, c) = augmentedB(i, c) - (augmentedA(i, j) * solutionMatrix(j, c)) ; %This subtracts the values on the LHS of the equation with known numbers.
                     end
                 end
                 if cannotBeSolved == true %Breaking out the loop if it cannot be solved.
