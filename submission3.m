@@ -171,5 +171,5 @@ Xo_2 = [1; 1]; %Second roots lies somewhere near these points.
 x1 = NewtonMethodSystem(F, J, Xo_1, tolerance);
 x2 = NewtonMethodSystem(F, J, Xo_2, tolerance);
 fprintf("\n\n");
-fprintf("The roots are: [" + num2str(x1(1,1)) + "," + num2str(x2(1,1)) + "], [" + num2str(x1(2,1)) + "," + num2str(x2(2,1)) + "]\n"); 
+fprintf("The roots are: [" + num2str(x1(1,1)) + "," + num2str(x1(2,1)) + "], [" + num2str(x2(1,1)) + "," + num2str(x2(2,1)) + "]\n"); 
 end
