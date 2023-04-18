@@ -1,5 +1,5 @@
 function x = NewtonMethodSystem(F, J, Xo, tol)
-errorGreaterThanTol = false;
+errorGreaterThanTol = true;
 
  while errorGreaterThanTol
 
@@ -37,6 +37,8 @@ errorGreaterThanTol = false;
          end
      end
 
+    
+
      f = f * -1;
      s = gaussMultipleSystems(j, f);
      previous_Xo = Xo;
@@ -47,14 +49,13 @@ errorGreaterThanTol = false;
 
      if size(F,1) == 2
          if error(1,1) < tol && error(2,1) < tol
-             errorGreaterThanTol = true;
+             errorGreaterThanTol = false;
          end
      elseif size(F,1) == 3
          if error(1,1) < tol && error(2,1) < tol && error(3,1) < tol
-             errorGreaterThanTol = true;
+             errorGreaterThanTol = false;
          end
      end
-     z = z + 1;
  end
 
 x = Xo;

@@ -95,10 +95,13 @@ PlotErrors();
 
 fprintf("\n");
 fprintf("\n");
+fprintf("\n");
+fprintf("\n");
+
 %% Question 1b
 f = @(x) tan(x) - x;
 %found the different intervals by plotting f in matlab.
-%Plotted f(x) - g(x) to find the intervals of Io.
+
 first_Io = [-0.0001 1.5];
 second_Io = [2 4.5];
 third_Io = [6 7.8];
@@ -133,7 +136,13 @@ tolerance = 0.00001;
 
 x = NewtonMethodSystem(F, J, Xo, tolerance);
 
-fprintf("The root is: [" + num2str(x(1,1)) + "," + num2str(x(2,1)) + num2str(x(3,1)) + "]\n"); 
+fprintf("The root is:"); 
+disp(x(1,1));
+fprintf("\t\t\t");
+disp(x(2,1));
+fprintf("\t\t\t");
+disp(x(3,1));
+fprintf("\n");
 %% Question 2b
 
 F1 = @(x,y) x^3 - 3*x*(y^2) - 1;
@@ -150,7 +159,7 @@ J = {J1 J2; J3 J4};
 Xo = [-0.6; 0.6];
 
 x = NewtonMethodSystem(F, J, Xo, tolerance);
-fprintf("The root is: [" + num2str(x(1,1)) + "," + num2str(x(2,1)) + "]\n"); 
+fprintf("The root is: [" + num2str(x(1,1))); 
 %% Question 2c
 F1 = @(x,y) x^2 - x - y;
 F2 = @(x,y) (x^2) / 16 + y^2 - 1;
@@ -166,10 +175,7 @@ J = {J1 J2; J3 J4};
 Xo_1 = [-1; 1]; %First root lies somewhere near these points.
 Xo_2 = [1; 1]; %Second roots lies somewhere near these points.
 
-%Graph for this question is sent as a picture in the submission.
-
 x1 = NewtonMethodSystem(F, J, Xo_1, tolerance);
 x2 = NewtonMethodSystem(F, J, Xo_2, tolerance);
-fprintf("\n\n");
 fprintf("The roots are: [" + num2str(x1(1,1)) + "," + num2str(x2(1,1)) + "], [" + num2str(x1(2,1)) + "," + num2str(x2(2,1)) + "]\n"); 
 end

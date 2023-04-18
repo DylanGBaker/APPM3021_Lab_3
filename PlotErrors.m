@@ -21,6 +21,9 @@ t3 = 1:IterationCount + 1;
 y3 = ErrorMatrix(:,1);
 plot(t3, y3);
 
+title("Graph of Iteration Count vs Error for all Methods Used for Question 1ai");
+xlabel("Iteration Count");
+ylabel("Error");
+legend("Bisection Method", "Regular Falsi Method", "Newtons Method");
 hold off
-
 end
