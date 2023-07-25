@@ -9,6 +9,6 @@ while (abs(current_Xo - previous_Xo)) / abs(current_Xo) > tol
     current_Xo = current_Xo - (f(current_Xo)/ fprime_Value); %implementing equation for the newton method.
     iterationCount = iterationCount + 1;
 end
-x = current_Xo;
-IterationCount  = iterationCount - 1;
+x = current_Xo
+IterationCount  = iterationCount - 1
 end
